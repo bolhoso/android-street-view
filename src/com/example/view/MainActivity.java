@@ -2,10 +2,13 @@ package com.example.view;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.Menu;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+/**
+ * Webview example that shows how to add street view to your app from
+ * an HTML file at the assets/ dir
+ */
 public class MainActivity extends Activity {
 
 	@Override
@@ -18,12 +21,4 @@ public class MainActivity extends Activity {
 		  webView.setWebViewClient(new WebViewClient());
 		  webView.loadUrl( "file:///android_asset/mapa.html");
 	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
-	}
-
 }
